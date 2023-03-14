@@ -1,0 +1,11 @@
+<form action="{{ url_for('social.post')}}" method="post">
+    {{ post_form.hidden_tag() }}
+    <p>
+        {{ post_form.body.label }}<br>
+        {{ post_form.body(size=32) }}
+    </p>
+    
+    <p>
+        {{ post_form.submit(class='btn btn-primary') }}
+    </p>
+</form>

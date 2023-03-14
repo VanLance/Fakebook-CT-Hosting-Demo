@@ -1,0 +1,13 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+    <h2>CDN 109</h2>
+    <h2>Instructors</h2>
+    {% for instructor in cdn['instructors'] %}
+        <span>{{ instructor }} </span>
+    {% endfor %}
+    <h2>Students</h2>
+    {% for student in cdn.students %}
+        <p>{{ student }}</p>
+    {% endfor %}
+{% endblock %}
