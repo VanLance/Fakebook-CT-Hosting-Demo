@@ -4,18 +4,6 @@ from app.forms import RegisterForm, SignInForm
 from app.blueprints.social.models import User
 from flask_login import login_user, logout_user
 
-@app.route('/')
-def index():
-    cdn={
-        'instructors':('lucas','dylan'),
-        'students':['blane','ashmika','abe','zi','connor','martin','noah','erm']
-    }
-    return render_template('index.jinja', cdn=cdn, title='Home')
-
-@app.route('/about')
-def about():
-    return render_template('about.jinja')
-
 @app.route('/register', methods=['GET',"POST"])
 def register():
     form = RegisterForm()

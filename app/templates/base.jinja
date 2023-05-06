@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,8 +28,8 @@
         {% endwith %}
         {% if current_user.is_authenticated %}
         <div class="row">
-            <div class="col-6">{% include 'post.jinja' %}</div>
-            <div class="col-6">{% include 'search.jinja' %}</div>
+            <div class="col-6">{% include './includes/post.jinja' %}</div>
+            <div class="col-6">{% include './includes/search.jinja' %}</div>
         </div>
         {% endif %}
         <h1>FakeBook CDN - Changes</h1>
