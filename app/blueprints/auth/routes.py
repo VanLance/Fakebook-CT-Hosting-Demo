@@ -22,6 +22,7 @@ def register():
             u = User(username=username,email=email,password_hash='')
             u.hash_password(password)
             print(u.password_hash)
+            u.set_token()
             u.commit()
             login_user(u)
             flash(f'Register Requested for {email} {username}','success')
